@@ -1,16 +1,80 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #07080F;
 }
 
 #my_canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.heroSection {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.navigationBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333753;
+    font-family: "DM Mono", monospace;
+    list-style: none;
+    font-size: 20px;
+}
+
+.listItem {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: default;
+    user-select: none;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.heroText {
+    font-family: "Instrument Serif", serif;
+    font-size: 150px;
+    margin: 50px;
+    color: rgb(201, 209, 252);
+    font-weight: 100;
+    cursor: default;
+    line-height: 150px;
+}
+
+.highlighted {
+    font-style: italic;
+    color: #668EAF;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #333753;
+}
+
+.aboutSection {
+    width: 100%;
+    height: 100vh;
 }

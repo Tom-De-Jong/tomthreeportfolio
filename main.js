@@ -84,7 +84,7 @@ scene.add(tetrahedron);
 
 camera.position.z = 15;
 
-cone.position.set(10, 0, -25);
+cone.position.set(-1, -5, -25);
 dodecahedron.position.set(25, 20, -25);
 octahedron.position.set(-10, 18, -25)
 tetrahedron.position.set(35, -18, -25)
