@@ -78,3 +78,78 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+.topNav {
+    height: 50px;
+    width: 100%;
+    outline: rgb(224, 255, 224) 2px dotted;
+}
+
+.navName {
+    color: #575d8d;
+    margin: 40px;
+    float: right;
+    font-family: "DM Mono", monospace;
+    font-size: 25px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.splitDiv {
+    height: 80%;
+    width: 90%;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitDivItem {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tomIMG{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.aboutText{
+    color: #575d8d;
+    font-family: "DM Mono", monospace;
+    font-size: 1.6vw;
+}
+
+.line2{
+    position: absolute;
+    bottom: -100vh;
+    width: 100%;
+    height: 1px;
+    background-color: #333753;
+}
+
+.workHolder{
+    width: 100%;
+    height: 100vh;
+}
+
+.workHolder{
+    width: 100%;
+    height: 100vh;
+}

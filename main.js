@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 
+//hero
 var canvReference = document.getElementById("my_canvas");
 
 const scene = new THREE.Scene();
@@ -104,6 +105,17 @@ const origins = {
   tetrahedron: tetrahedron.position.clone(),
 };
 
+//my work cards
+
+const workHolder = document.querySelector(".workHolder");
+var workRenderer = new THREE.WebGLRenderer({ alpha: true });
+workRenderer.setSize(window.innerWidth, window.innerHeight);
+workRenderer.setClearColor(0x000000, 0);
+workHolder.appendChild(workRenderer.domElement);
+
+
+
+
 let t = 0;
 
 function animate() {
@@ -143,8 +155,8 @@ tetrahedron.position.z = origins.tetrahedron.z + Math.sin(t * 1.3 + Math.PI * 1.
   
 mouse.lerp(targetMouse, 0.1);
 
-  camera.position.x = mouse.x * .8;
-  camera.position.y = mouse.y * .8;
+  camera.position.x = mouse.x * 1.5;
+  camera.position.y = mouse.y * 1.5;
 
   camera.lookAt(scene.position);
   renderer.render(scene, camera);
