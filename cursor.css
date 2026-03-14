@@ -1,0 +1,22 @@
+* {
+    cursor: none;
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: #939ad4;
+    border: 2px #07080F solid;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+    z-index: 9999;
+}
+
+#custom-cursor.enlarged {
+    width: 48px;
+    height: 48px;
+    background: #e3e3e7;
+}

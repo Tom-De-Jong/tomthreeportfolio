@@ -99,8 +99,24 @@ const mouse = new THREE.Vector2();
 const targetMouse = new THREE.Vector2();
 
 window.addEventListener('mousemove', (event) => {
-  targetMouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  targetMouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  if (window.innerWidth > 500) {
+    targetMouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    targetMouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  }
+});
+
+
+if (window.innerWidth < 500) {
+  const scrollY = Math.max(0, window.scrollY) / window.innerHeight;
+  camera.position.z = scrollY * 25;
+}
+
+
+window.addEventListener('scroll', () => {
+  if (window.innerWidth < 500) {
+    const scrollY = Math.max(0, window.scrollY) / window.innerHeight;
+    camera.position.z = scrollY * 40;
+  }
 });
 
 const origins = {
@@ -129,7 +145,7 @@ workFillLight.position.set(10, 0, -10);
 workScene.add(workFillLight);
 
 var workRenderer = new THREE.WebGLRenderer({ alpha: true, canvas: workCanvReference });
-workRenderer.setSize(window.innerWidth, window.innerHeight);
+workRenderer.setSize(window.innerWidth, window.innerHeight)
 workRenderer.setPixelRatio(window.devicePixelRatio);
 workRenderer.setClearColor(0x000000, 0);
 workRenderer.outputEncoding = THREE.sRGBEncoding;
@@ -200,31 +216,32 @@ let isDragging = false;
 let startX = 0;
 let startY = 0;
 
-document.addEventListener('mousedown', function (event) {
+document.querySelector('.workCanvas').addEventListener('mousedown', function (event) {
   startX = event.clientX;
   startY = event.clientY;
   isDragging = false;
 });
-
 document.addEventListener('mousemove', function (event) {
   const dx = event.clientX - startX;
   const dy = event.clientY - startY;
-
   if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
     isDragging = true;
   }
 });
 
-document.addEventListener('mouseup', function (event) {
+document.querySelector('.workCanvas').addEventListener('mouseup', function (event) {
   if (isDragging) return;
 
+  const canvas = document.querySelector('.workCanvas');
+  const rect = canvas.getBoundingClientRect();
+
   const coords = new THREE.Vector2(
-    (event.clientX / renderer.domElement.clientWidth) * 2 - 1,
-    -((event.clientY / renderer.domElement.clientHeight) * 2 - 1),
-  )
+    ((event.clientX - rect.left) / rect.width) * 2 - 1,
+    -((event.clientY - rect.top) / rect.height) * 2 + 1
+  );
 
-  raycaster.setFromCamera(coords, workCamera)
-
+  console.log(coords);
+  raycaster.setFromCamera(coords, workCamera);
   const intersections = raycaster.intersectObjects(workScene.children, true);
   if (intersections.length > 0) {
     const selectedObject = intersections[0].object;

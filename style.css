@@ -2,10 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #07080F;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    height: inherit;
+    width: inherit;
 }
 
 #my_canvas {
@@ -33,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333753;
+    color: #575d8d;
     font-family: "DM Mono", monospace;
     list-style: none;
     font-size: 20px;
@@ -42,7 +50,6 @@ body {
 .listItem {
     margin-left: 10px;
     margin-right: 10px;
-    cursor: default;
     user-select: none;
 }
 
@@ -58,7 +65,6 @@ body {
     margin: 50px;
     color: rgb(201, 209, 252);
     font-weight: 100;
-    cursor: default;
     line-height: 150px;
 }
 
@@ -78,9 +84,10 @@ body {
     outline: rgb(224, 255, 224) 2px dotted;
 }
 
-.workSection{
+.workSection {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    border-bottom: 1px #333753 solid;
 }
 
 .navName {
@@ -98,7 +105,8 @@ body {
     width: 100%;
     flex: 1;
     padding: 40px 0;
-    position: relative; /* was absolute */
+    position: relative;
+    /* was absolute */
 }
 
 .splitDiv {
@@ -118,45 +126,204 @@ body {
     justify-content: center;
 }
 
-.imgHolder{
+.imgHolder {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.tomIMG{
+.tomIMG {
     max-height: 100%;
     max-width: 100%;
 }
 
-.aboutText{
+.aboutText {
     color: #575d8d;
     font-family: "DM Mono", monospace;
     font-size: 1.6vw;
 }
 
-
-.workHolder{
+.workHolder {
     width: 100%;
-    height: 100vh;
+    border-bottom: 1px #333753 solid;
 }
 
-.workHolder{
-    width: 100%;
-    height: 100vh;
-}
-
-.workCanvas{
-    position: block;
+.workCanvas {
+    position: absolute;
     width: 100%;
     height: 100%;
 }
 
-@media only screen and (max-width: 1100px) {
-.workCanvas{
+.mobileWork {
     display: none;
+    width: 100%;
+    justify-content: center;
 }
+
+.workContainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
 }
+
+.workCard {
+    width: 48%;
+    border: #575d8d 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.workImage {
+    width: 100%;
+}
+
+.workName {
+    color: #575d8d;
+    font-size: 40px;
+    font-family: "DM Mono", monospace;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.workDescription {
+    color: #575d8d;
+    font-size: 15px;
+    font-family: "DM Mono", monospace;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contactSection {
+    border-bottom: 1px #333753 solid;
+}
+
+.formHolder {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.navNameHolder {
+    height: 123px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navName2 {
+    color: #575d8d;
+    margin-right: 40px;
+    font-family: "DM Mono", monospace;
+    font-size: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+label {
+    color: #575d8d;
+    font-size: 25px;
+    font-family: "DM Mono", monospace;
+    margin-top: 25px;
+}
+
+input,
+textarea {
+    color: #575d8d;
+    background-color: #07080f00;
+    outline: none;
+    border: 2px solid #575d8d;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+}
+
+textarea {
+    height: 400px;
+}
+
+.splitForm {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.splitFormItem {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.submitButton {
+    margin-top: 25px;
+    height: 50px;
+    background-color: #575d8d;
+    outline: none;
+    color: #07080f;
+    border: none;
+    font-family: "DM Mono", monospace;
+    font-size: 30px;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#copyright {
+    color: #575d8d;
+    font-size: 15px;
+    font-family: "DM Mono", monospace;
+}
+
+.email {
+    color: #575d8d;
+    font-size: 15px;
+    font-family: "DM Mono", monospace;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    .workCanvas {
+        display: none;
+    }
+
+    .mobileWork {
+        display: flex;
+    }
+
+    .workCard {
+        width: 100%;
+    }
+
+    .splitForm {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .splitFormItem {
+        width: 100%;
+    }
+}
+
 
 @media only screen and (max-width: 880px) {
     .splitDiv {
@@ -187,19 +354,48 @@ body {
         height: auto;
         padding: 30px 0;
     }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #copyright {
+        text-align: center;
+    }
+
+    .mail {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 550px) {
-.heroText{
-    text-align: center;
+    .heroText {
+        text-align: center;
+    }
+
+    .bottom {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
 }
 
-.bottom{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
+@media only screen and (max-width: 500px) {
+
+    .workName {
+        font-size: 25px;
+    }
+
+    #copyright {
+        font-size: 12px;
+    }
+
+    .mail {
+        font-size: 12px;
+    }
+
 }

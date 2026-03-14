@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
+    <script src="music.js"></script>
 </head>
 
 <body>
@@ -26,9 +28,9 @@
 
         <nav class="navigationBar">
             <ul class="navList">
-                <li class="listItem">About</li>
-                <li class="listItem">Work</li>
-                <li class="listItem">Contact</li>
+                <li class="listItem"><a href="#aboutSection">About</a></li>
+                <li class="listItem"><a href="#workSection">Work</a></li>
+                <li class="listItem"><a href="#contactSection">Contact</a></li>
             </ul>
         </nav>
 
@@ -38,7 +40,7 @@
         </div>
     </section>
 
-    <section class="aboutSection">
+    <section class="aboutSection" id="aboutSection">
         <p class="navName">About</p>
         <div class="center">
             <div class="splitDiv">
@@ -60,16 +62,109 @@
         </div>
     </section>
 
-    <section class="workSection">
+    <section class="workSection" id="workSection">
         <p class="navName">Work</p>
 
         <div class="workHolder">
             <canvas class="workCanvas" id="workCanvas"></canvas>
+
+            <div class="mobileWork">
+                <div class="workContainer">
+
+                    <div class="workCard">
+                        <a href="https://www.trouwambtenaarmarlies.nl/" target="_blank">
+                            <img class="workImage" src="img/1.png" alt="">
+                            <p class="workName">Trouwambtenaar marlies</p>
+                            <p class="workDescription">I built this website for Trouwambtenaar Marlies Driessen by hand
+                                with html, css, javascript, and php with a database tailored to her for uploading new
+                                reviews to the website.</p>
+                        </a>
+                    </div>
+
+                    <div class="workCard">
+                        <a href="https://trein.tomwebsites.nl/" target="_blank">
+                            <img class="workImage" src="img/3.png" alt="">
+                            <p class="workName">NS Station board</p>
+                            <p class="workDescription">I created this because i was interested in using the NS api
+                                (nederlandse spoorwegen). It gets info about the station and which train will come next.
+                                It shows the data in real time updating every minute.
+                        </a>
+                    </div>
+
+
+                    <div class="workCard">
+                        <a href="https://health.tomwebsites.nl/" target="_blank">
+                            <img class="workImage" src="img/4.png" alt="">
+                            <p class="workName">Healthcode</p>
+                            <p class="workDescription">I created this project because i was interested in integrating ai
+                                inside of my projects, and because most similar apps cost money.
+                        </a>
+                    </div>
+
+                    <div class="workCard">
+                        <a href="https://naomisluisterhart.nl/" target="_blank">
+                            <img class="workImage" src="img/2.png" alt="">
+                            <p class="workName">Naomi's Luisterhart</p>
+                            <p class="workDescription">I built this website for Naomi using the wordpress page builder
+                                to make it as user friendly and editable as possible for her.</p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
 
     </section>
 
+    <section class="contactSection" id="contactSection">
+        <div class="navNameHolder">
+            <p class="navName2">Contact</p>
+        </div>
+
+        <div class="formHolder">
+            <form class="form" action="sendForm.php">
+
+                <div class="splitForm">
+                    <div class="splitFormItem">
+                        <label for="">Name*</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="splitFormItem">
+                        <label for="">E-Mail*</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+                <label for="">Message*</label>
+                <textarea name="" id=""></textarea>
+
+                <button class="submitButton">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+
+        <div id="copyright">
+            &copy; Tom de Jong - All Rights Reserved.
+        </div>
+
+        <div class="email">
+            <p class="email"><a class="underline mail" href="mailto:tomdejong2009@gmail.com">tomdejong2009@gmail.com</a></p>
+        </div>
+
+        <script>
+            (() => {
+                const copyrightElement = document.getElementById("copyright");
+                copyrightElement.innerHTML = "&copy;  " + new Date().getFullYear() + " Tom de Jong - All Rights Reserved.";
+            })();
+        </script>
+    </footer>
+
 </body>
 <script type="module" src="main.js"></script>
-
+<script src="mouse.js" defer></script>
 </html>
