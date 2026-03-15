@@ -301,6 +301,34 @@ footer {
     text-decoration: underline;
 }
 
+.startScreen{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #07080fbb;
+    z-index: 999;
+    backdrop-filter: blur(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s ease;
+}
+
+.startText {
+  color: #575d8d;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.startText span {
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.startText span:hover {
+  color: #a0a8d8;
+}
+
 @media only screen and (max-width: 800px) {
     .workCanvas {
         display: none;
