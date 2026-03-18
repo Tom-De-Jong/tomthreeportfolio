@@ -148,6 +148,22 @@ a {
     border-bottom: 1px #333753 solid;
 }
 
+.workholder2{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.projectNote{
+    color: #575d8d;
+    font-family: "DM Mono", monospace;
+    font-size: 1.5vw;
+    margin-bottom: 50px;
+}
+
 .workCanvas {
     position: absolute;
     width: 100%;
@@ -350,6 +366,16 @@ footer {
     .splitFormItem {
         width: 100%;
     }
+
+    .projectNote{
+        display: none;
+    }
+
+    .workholder2{
+        position: relative;
+    }
+
+
 }
 
 
