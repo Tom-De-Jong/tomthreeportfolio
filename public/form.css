@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+    background-color: #07080f;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 860px;
+}
+
+.form label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b75c9;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(107, 117, 201, 0.25);
+    border-radius: 0;
+    color: #e0e0f0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: rgba(224, 224, 240, 0.2);
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: rgba(107, 117, 201, 0.7);
+    background: rgba(107, 117, 201, 0.04);
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.6;
+}
+
+.splitForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.splitFormItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.submitButton {
+    align-self: flex-start;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #07080f;
+    background: #6b75c9;
+    border: 1px solid #6b75c9;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+.submitButton:hover {
+    background: transparent;
+    color: #6b75c9;
+}
+
+.submitButton:active {
+    opacity: 0.6;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 480px;
+    width: 100%;
+}
+
+.feedback svg {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    stroke-width: 1.5;
+}
+
+.feedback.success svg {
+    color: #6b75c9;
+}
+
+.feedback.error svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0;
+    color: #c96b6b;
+}
+
+.feedbackTitle {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 0;
+    color: #e0e0f0;
+    letter-spacing: 0.01em;
+}
+
+.feedbackSub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #6b75c9;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.feedback.error .feedbackSub {
+    color: #c96b6b;
+}
+
+.backLink {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #6b75c9;
+    text-decoration: none;
+    margin-top: 1rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+}
+
+.backLink:hover {
+    opacity: 0.6;
+}
+
+.feedback.error {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem 1rem;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(201, 107, 107, 0.25);
+    background: rgba(201, 107, 107, 0.05);
+    max-width: 860px;
+}
+
+.feedback.error .feedbackTitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #c96b6b;
+}
+
+@media (max-width: 600px) {
+    .formPage {
+        padding: 2rem 1.25rem;
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    .splitForm {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .submitButton {
+        width: 100%;
+        text-align: center;
+    }
+}

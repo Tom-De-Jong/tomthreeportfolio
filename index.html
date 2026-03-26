@@ -1,25 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tomwebsites</title>
+    <title>Tom de Jong - Webdeveloper Hoorn | Maatwerk Websites</title>
+    <meta name="description" content="Tom de Jong is een webdeveloper uit Hoorn die maatwerk websites bouwt voor bedrijven en ondernemers. Specialismen: HTML, CSS, JavaScript, PHP, WordPress en SEO.">
+    <meta name="keywords" content="webdeveloper Hoorn, maatwerk website, website laten maken Hoorn, SEO Hoorn, Tom de Jong, TomWebsites">
+    <meta name="author" content="Tom de Jong">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://tomwebsites.nl/">
+    <link rel="alternate" href="https://tomwebsites.nl/" hreflang="nl-NL">
+    <link rel="alternate" href="https://tomwebsites.nl/" hreflang="x-default">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tomwebsites.nl/">
+    <meta property="og:title" content="Tom de Jong - Webdeveloper Hoorn | Maatwerk Websites">
+    <meta property="og:description" content="Tom de Jong bouwt maatwerk websites voor bedrijven en ondernemers in Hoorn en omgeving. Snel, professioneel en goed vindbaar in Google.">
+    <meta property="og:image" content="https://tomwebsites.nl/tom.webp">
+    <meta property="og:image:alt" content="Portretfoto van Tom de Jong">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="TomWebsites">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tom de Jong - Webdeveloper Hoorn | Maatwerk Websites">
+    <meta name="twitter:description" content="Tom de Jong bouwt maatwerk websites voor bedrijven en ondernemers in Hoorn en omgeving.">
+    <meta name="twitter:image" content="https://tomwebsites.nl/tom.webp">
+    <meta name="twitter:image:alt" content="Portretfoto van Tom de Jong">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "https://tomwebsites.nl/#business",
+                    "name": "TomWebsites",
+                    "url": "https://tomwebsites.nl/",
+                      "image": "https://tomwebsites.nl/tom.webp",
+                    "description": "Maatwerk websites voor bedrijven en ondernemers in Hoorn en omgeving.",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Tom de Jong"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Hoorn",
+                        "addressRegion": "Noord-Holland",
+                        "addressCountry": "NL"
+                    },
+                    "email": "tomdejong2009@gmail.com",
+                    "areaServed": ["Hoorn", "Noord-Holland"]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://tomwebsites.nl/#website",
+                    "name": "TomWebsites",
+                    "url": "https://tomwebsites.nl/",
+                    "inLanguage": "nl-NL",
+                    "publisher": { "@id": "https://tomwebsites.nl/#business" }
+                }
+            ]
+        }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..900&display=swap" rel="stylesheet">
 
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cursor.css">
     <script src="music.js"></script>
@@ -27,7 +77,7 @@
 
 <body>
 
-    <div class="startScreen">
+    <dialog class="startScreen" aria-label="Welkomstscherm - klik om te beginnen">
         <p class="startText">
             <span>K</span><span>l</span><span>i</span><span>k</span>
             <span> </span>
@@ -41,12 +91,12 @@
             <span> </span>
             <span>a</span><span>a</span><span>n</span>
         </p>
-    </div>
+    </dialog>
 
-    <section class="heroSection">
-        <canvas id="my_canvas"></canvas>
+    <header class="heroSection">
+        <canvas id="my_canvas" aria-hidden="true"></canvas>
 
-        <nav class="navigationBar">
+        <nav class="navigationBar" aria-label="Hoofdnavigatie">
             <ul class="navList">
                 <li class="listItem"><a href="#aboutSection">Over</a></li>
                 <li class="listItem"><a href="#workSection">Werk</a></li>
@@ -57,141 +107,139 @@
         <div class="bottom">
             <h1 class="heroText">Tom<br>de <span class="highlighted">Jong</span></h1>
         </div>
-        </div>
-    </section>
+    </header>
 
-    <section class="aboutSection" id="aboutSection">
-        <p class="navName">Over</p>
-        <div class="center">
-            <div class="splitDiv">
-                <div class="splitDivItem imgHolder">
-                    <img class="tomIMG" src="https://tomwebsites.nl/tom.png" alt="">
-                </div>
-                <div class="splitDivItem textItem">
-                    <p class="aboutText">Ik ben een tweedejaars student aan het Mediacollege en werk als webdeveloper in
-                        Hoorn. Ik focus op het bouwen van professionele, snelle en gebruiksvriendelijke websites voor
-                        bedrijven en
-                        ondernemers in Hoorn en de omgeving. Dankzij mijn sterke technische achtergrond en
-                        zelfstudie kon ik het eerste jaar overslaan en meteen aan de slag met uitdagendere projecten.
-                        <br><br>
-                        Ik ontwikkel moderne websites met een veilige backend, en ik zorg ervoor dat websites sneller,
-                        veiliger
-                        en beter vindbaar zijn in Google. Of het nu gaat om het maken van een website, een WordPress
-                        website, een
-                        website redesign, websiteonderhoud of SEO-optimalisatie, ik denk met je mee en lever
-                        oplossingen die echt resultaat opleveren.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <section class="workSection" id="workSection">
-        <p class="navName">Werk</p>
-
-        <div class="workholder2">
-            <canvas class="workCanvas" id="workCanvas"></canvas>
-
-            <p class="projectNote">Alle projecten zijn volledig door mij gemaakt als werk of hobbyproject</p>
-
-            <div class="mobileWork">
-                <div class="workContainer">
-
-                    <div class="workCard">
-                        <a href="https://www.trouwambtenaarmarlies.nl/" target="_blank">
-                            <img class="workImage" src="img/1.png" alt="">
-                            <p class="workName">Trouwambtenaar marlies</p>
-                            <p class="workDescription">Ik heb deze website voor Trouwambtenaar Marlies Driessen zelf
-                                gebouwd
-                                met html, css, javascript en php met een database op maat voor het uploaden van nieuwe
-                                recensies naar de website.</p>
-                        </a>
+        <section class="aboutSection" id="aboutSection" aria-labelledby="about-heading">
+            <p class="navName" id="about-heading">Over</p>
+            <div class="center">
+                <div class="splitDiv">
+                    <div class="splitDivItem imgHolder">
+                        <img class="tomIMG" src="./tom.webp" alt="Portretfoto van Tom de Jong, webdeveloper uit Hoorn" loading="lazy">
                     </div>
-
-                    <div class="workCard">
-                        <a href="https://trein.tomwebsites.nl/" target="_blank">
-                            <img class="workImage" src="img/3.png" alt="">
-                            <p class="workName">NS Station board</p>
-                            <p class="workDescription">Ik heb dit gemaakt omdat ik geïnteresseerd was in het gebruik van
-                                de NS API
-                                (Nederlandse Spoorwegen). Het haalt informatie op over het station en welke trein er als
-                                volgende komt.
-                                De data wordt in realtime weergegeven en elke minuut bijgewerkt.
-                        </a>
+                    <div class="splitDivItem textItem">
+                        <p class="aboutText">Ik ben een tweedejaars student aan het Mediacollege en werk als webdeveloper in
+                            Hoorn. Ik focus op het bouwen van professionele, snelle en gebruiksvriendelijke websites voor
+                            bedrijven en
+                            ondernemers in Hoorn en de omgeving. Dankzij mijn sterke technische achtergrond en
+                            zelfstudie kon ik het eerste jaar overslaan en meteen aan de slag met uitdagendere projecten.
+                            <br><br>
+                            Ik ontwikkel moderne websites met een veilige backend, en ik zorg ervoor dat websites sneller,
+                            veiliger
+                            en beter vindbaar zijn in Google. Of het nu gaat om het maken van een website, een WordPress
+                            website, een
+                            website redesign, websiteonderhoud of SEO-optimalisatie, ik denk met je mee en lever
+                            oplossingen die echt resultaat opleveren.
+                        </p>
                     </div>
-
-
-                    <div class="workCard">
-                        <a href="https://health.tomwebsites.nl/" target="_blank">
-                            <img class="workImage" src="img/4.png" alt="">
-                            <p class="workName">Healthcode</p>
-                            <p class="workDescription">Ik heb dit project gemaakt omdat ik geïnteresseerd was in het
-                                integreren van AI
-                                in mijn projecten, en omdat de meeste vergelijkbare apps geld kosten.
-                        </a>
-                    </div>
-
-                    <div class="workCard">
-                        <a href="https://naomisluisterhart.nl/" target="_blank">
-                            <img class="workImage" src="img/2.png" alt="">
-                            <p class="workName">Naomi's Luisterhart</p>
-                            <p class="workDescription">Ik heb deze website voor Naomi gebouwd met de WordPress page
-                                builder
-                                om het zo gebruiksvriendelijk en bewerkbaar mogelijk te maken voor haar.</p>
-                        </a>
-                    </div>
-
-
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <section class="workSection" id="workSection" aria-labelledby="work-heading">
+            <p class="navName" id="work-heading">Werk</p>
 
-    <section class="contactSection" id="contactSection">
-        <div class="navNameHolder">
-            <p class="navName2">Contact</p>
-        </div>
+            <div class="workholder2">
+                <canvas class="workCanvas" id="workCanvas" aria-hidden="true"></canvas>
 
-        <div class="formHolder">
-            <form class="form" action="sendForm.php">
+                <p class="projectNote">Alle projecten zijn volledig door mij gemaakt als werk of hobbyproject</p>
 
-                <div class="splitForm">
-                    <div class="splitFormItem">
-                        <label for="">Naam*</label>
-                        <input type="text">
+                <div class="mobileWork">
+                    <div class="workContainer">
+
+                        <article class="workCard">
+                            <a href="https://www.trouwambtenaarmarlies.nl/" target="_blank" rel="noopener noreferrer">
+                                <img class="workImage" src="img/1.webp" alt="Screenshot van de website voor Trouwambtenaar Marlies Driessen" loading="lazy">
+                                <p class="workName">Trouwambtenaar Marlies</p>
+                                <p class="workDescription">Ik heb deze website voor Trouwambtenaar Marlies Driessen zelf
+                                    gebouwd
+                                    met html, css, javascript en php met een database op maat voor het uploaden van nieuwe
+                                    recensies naar de website.</p>
+                            </a>
+                        </article>
+
+                        <article class="workCard">
+                            <a href="https://trein.tomwebsites.nl/" target="_blank" rel="noopener noreferrer">
+                                <img class="workImage" src="img/3.webp" alt="Screenshot van de NS Station Board webapp" loading="lazy">
+                                <p class="workName">NS Station board</p>
+                                <p class="workDescription">Ik heb dit gemaakt omdat ik geïnteresseerd was in het gebruik van
+                                    de NS API
+                                    (Nederlandse Spoorwegen). Het haalt informatie op over het station en welke trein er als
+                                    volgende komt.
+                                    De data wordt in realtime weergegeven en elke minuut bijgewerkt.</p>
+                            </a>
+                        </article>
+
+                        <article class="workCard">
+                            <a href="https://health.tomwebsites.nl/" target="_blank" rel="noopener noreferrer">
+                                <img class="workImage" src="img/4.webp" alt="Screenshot van de Healthcode AI-webapp" loading="lazy">
+                                <p class="workName">Healthcode</p>
+                                <p class="workDescription">Ik heb dit project gemaakt omdat ik geïnteresseerd was in het
+                                    integreren van AI
+                                    in mijn projecten, en omdat de meeste vergelijkbare apps geld kosten.</p>
+                            </a>
+                        </article>
+
+                        <article class="workCard">
+                            <a href="https://naomisluisterhart.nl/" target="_blank" rel="noopener noreferrer">
+                                <img class="workImage" src="img/2.webp" alt="Screenshot van de website voor Naomi's Luisterhart" loading="lazy">
+                                <p class="workName">Naomi's Luisterhart</p>
+                                <p class="workDescription">Ik heb deze website voor Naomi gebouwd met de WordPress page
+                                    builder
+                                    om het zo gebruiksvriendelijk en bewerkbaar mogelijk te maken voor haar.</p>
+                            </a>
+                        </article>
+
                     </div>
-
-                    <div class="splitFormItem">
-                        <label for="">E-Mail*</label>
-                        <input type="text">
-                    </div>
-
                 </div>
+            </div>
 
-                <label for="">Bericht*</label>
-                <textarea name="" id=""></textarea>
+        </section>
 
-                <button class="submitButton">Verstuur</button>
-            </form>
-        </div>
-    </section>
+        <section class="contactSection" id="contactSection" aria-labelledby="contact-heading">
+            <div class="navNameHolder">
+                <p class="navName2" id="contact-heading">Contact</p>
+            </div>
+
+            <div class="formHolder">
+                <form class="form" action="sendForm.php" method="POST">
+
+                    <div class="splitForm">
+                        <div class="splitFormItem">
+                            <label for="naam">Naam*</label>
+                            <input type="text" id="naam" name="naam" autocomplete="name" required>
+                        </div>
+
+                        <div class="splitFormItem">
+                            <label for="email">E-Mail*</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <label for="bericht">Bericht*</label>
+                    <textarea id="bericht" name="bericht" required></textarea>
+
+                    <button class="submitButton" type="submit">Verstuur</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-
         <div id="copyright">
             &copy; Tom de Jong - Alle rechten voorbehouden.
         </div>
 
         <div class="email">
-            <p class="email"><a class="underline mail" href="mailto:tomdejong2009@gmail.com">tomdejong2009@gmail.com</a>
-            </p>
+            <p class="email"><a class="underline mail" href="mailto:tomdejong2009@gmail.com">tomdejong2009@gmail.com</a></p>
         </div>
 
         <script>
             (() => {
                 const copyrightElement = document.getElementById("copyright");
-                copyrightElement.innerHTML = "&copy;  " + new Date().getFullYear() + " Tom de Jong - Alle rechten voorbehouden.";
+                copyrightElement.innerHTML = "&copy; " + new Date().getFullYear() + " Tom de Jong - Alle rechten voorbehouden.";
             })();
         </script>
     </footer>
